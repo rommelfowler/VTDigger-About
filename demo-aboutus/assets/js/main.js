@@ -525,6 +525,28 @@ $(document).ready(function () {
         }
     });
 
+    var swiperFourSlides = new Swiper('.swiper-six-slides', {
+        pagination: '.swiper-pagination-four-slides',
+        autoplay: 3000,
+        slidesPerView: 6,
+        paginationClickable: true,
+        keyboardControl: true,
+        mousewheelControl: false,
+        preventClicks: false,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        breakpoints: {
+            850: {
+                slidesPerView: 2
+            },
+            650: {
+                slidesPerView: 2
+            },
+            480: {
+                slidesPerView: 1
+            }
+        }
+    });
     var swiperDemoHeaderStyle = new Swiper('.swiper-demo-header-style', {
         pagination: '.swiper-pagination-demo-header-style',
         loop: true,
@@ -1237,7 +1259,7 @@ $(document).ready(function () {
     });
 
     /*==============================================================
-    mega menu width 
+    mega menu width
     ===============================================================*/
     $("ul.mega-menu-full").each(function (idx, elm) {
         var megaMenuWidth = 0;
@@ -1629,7 +1651,7 @@ $(document).ready(function () {
         $('body').toggleClass('left-nav-on');
     });
     /*==============================================================*/
-    //    hamburger menu 
+    //    hamburger menu
     /*==============================================================*/
     $(document).on('click', '.btn-hamburger', function () {
         $('.hamburger-menu').toggleClass('show-menu');
@@ -1769,7 +1791,7 @@ $(document).ready(function () {
     ==============================================================*/
 
     /*==============================================================*/
-    //revolution Start 
+    //revolution Start
     /*==============================================================*/
     /* ================================
     home-creative-studio
@@ -2008,11 +2030,11 @@ $(document).ready(function () {
         });
     }
     /*==============================================================*/
-    //revolution End 
+    //revolution End
     /*==============================================================*/
 
     /*==============================================================*/
-    //magnificPopup Start 
+    //magnificPopup Start
     /*==============================================================*/
     $('.header-search-form').magnificPopup({
         mainClass: 'mfp-fade',
@@ -2058,7 +2080,7 @@ $(document).ready(function () {
     });
 
     /*==============================================================*/
-    //magnificPopup End 
+    //magnificPopup End
     /*==============================================================*/
     $("input.search-input").on("keypress", function (event) {
         if (event.which == 13 && !isMobile) {
